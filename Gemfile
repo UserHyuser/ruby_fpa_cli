@@ -2,6 +2,8 @@
 
 source 'https://rubygems.org'
 
+ruby '3.2.2'
+
 gem 'optparse'
 gem 'mini_magick'
 gem 'pdf-reader'
@@ -15,4 +17,5 @@ group :development, :test do
   gem 'faker'
   gem 'rubocop'
   gem 'simplecov'
+  gem 'pry'
 end

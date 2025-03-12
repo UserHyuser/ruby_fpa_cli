@@ -41,3 +41,8 @@ Style/FrozenStringLiteralComment:
   Exclude:
     - '**/*.arb'
     - 'spec/spec_helper.rb'
+
+Metrics/BlockLength:
+  Exclude:
+    - 'lib/tasks/**/*'
+    - 'spec/**/*'
