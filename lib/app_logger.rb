@@ -15,7 +15,6 @@ class AppLogger
         Logging.appenders.file(
           log_file,
           layout: Logging.layouts.json,
-          truncate: true, # Rotate logs
           size: 10 * 1024 * 1024, # 10MB max size
           keep: 5 # Keep 5 backups
         )

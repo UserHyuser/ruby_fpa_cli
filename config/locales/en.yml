@@ -16,8 +16,10 @@ en:
       text_extraction_not_supported: "Text extraction not supported for file type"
     operations:
       preview:
+        success: "Preview extraction started"
         success: "Preview extracted successfully"
         error: "Preview extraction failed"
       text:
+        start: "Text extraction started"
         success: "Text extracted successfully"
         error: "Text extraction failed"

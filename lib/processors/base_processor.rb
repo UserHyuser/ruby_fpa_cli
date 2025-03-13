@@ -43,6 +43,8 @@ module FileProcessor
     private
 
     def with_operation_logging(operation_type, output_file)
+      log_start(operation_type)
+
       yield(output_file)
 
       log_success(operation_type, output_file)
@@ -56,17 +58,24 @@ module FileProcessor
       "#{File.basename(@file, '.*')}#{extension}"
     end
 
+    def log_start(operation_type)
+      AppLogger.info(
+        I18n.t("file_processor.operations.#{operation_type}.start"),
+        { processor: self.class.to_s, input: @file }
+      )
+    end
+
     def log_success(operation_type, output_file)
       AppLogger.info(
         I18n.t("file_processor.operations.#{operation_type}.success"),
-        { input: @file, output: output_file }
+        { processor: self.class.to_s, input: @file, output: output_file }
       )
     end
 
     def log_error(operation_type, error)
       AppLogger.error(
         I18n.t("file_processor.operations.#{operation_type}.error"),
-        { input: @file, error: error.message }
+        { processor: self.class.to_s, input: @file, error: error.message }
       )
     end
   end
