@@ -1,0 +1,7 @@
+services:
+  file-processor:
+    image: file-processor
+    build: .
+    volumes:
+      - .:/app
+    entrypoint: ["bin/file_processor"]
