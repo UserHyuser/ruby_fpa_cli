@@ -3,6 +3,7 @@
 *.tmp
 *.pdf
 *.png
+*.jpg
 *.txt
 vendor/
 bundle/
