@@ -2,7 +2,6 @@
 
 require 'spec_helper'
 require 'app_logger'
-require 'pry'
 
 RSpec.describe AppLogger do
   let(:log_file) { './logs/test.log' }
@@ -15,7 +14,6 @@ RSpec.describe AppLogger do
   end
 
   after do
-    # Clean up the test log file
     File.delete(log_file) if File.exist?(log_file)
   end
 

@@ -8,8 +8,6 @@ require_relative '../app_logger'
 require_relative '../processors/image_processor'
 require_relative '../processors/pdf_processor'
 
-require 'pry'
-
 module FileProcessor
   # Handler for the command line interface
   class CLI

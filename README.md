@@ -1,6 +1,6 @@
 # File Processor Application
 
-A Dockerized Ruby CLI application for processing image and PDF files to extract previews and text content.
+A Ruby CLI application for processing image and PDF files to extract previews and text content.
 
 ## Features
 
@@ -44,8 +44,8 @@ A Dockerized Ruby CLI application for processing image and PDF files to extract 
 ## Installation
 
 ```bash
-git clone https://github.com/yourusername/file-processor.git
-cd file-processor
+git clone git@github.com:UserHyuser/ruby_fpa_cli.git
+cd ruby_fpa_cli
 bundle install
 ```
 
@@ -55,11 +55,12 @@ bundle install
 ### Run the application through docker image
 `docker-compose run --rm file-processor -f /app/test.pdf -c all`
 
-## Possible improvemetns
-- Create CI/CD pipeline with rspec, rubocop, simplecov
-
 ## Testing
 `bundle exec rspec`
+
+## Possible improvemetns
+- Create CI/CD pipeline with rspec, rubocop, simplecov and building docker image
+- YARD doc for every method
 
 ## License
 MIT License

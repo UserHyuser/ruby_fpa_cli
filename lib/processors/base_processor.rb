@@ -7,19 +7,21 @@ module FileProcessor
   # Abstract class for file processors
   class BaseProcessor
     PREVIEW_RESOLUTION = '400x400'
+    PREVIEW_OUTPUT_EXTENSION = '.preview.png'
+    TEXT_OUTPUT_EXTENSION = '.txt'
 
     def initialize(file)
       @file = file
     end
 
     def extract_and_save_preview
-      with_operation_logging(:preview, generate_output_filename('.preview.png')) do |output_file|
+      with_operation_logging(:preview, generate_output_filename(PREVIEW_OUTPUT_EXTENSION)) do |output_file|
         extract_preview.write(output_file)
       end
     end
 
     def extract_and_save_text
-      with_operation_logging(:text, generate_output_filename('.txt')) do |output_file|
+      with_operation_logging(:text, generate_output_filename(TEXT_OUTPUT_EXTENSION)) do |output_file|
         File.write(output_file, extract_text)
       end
     end

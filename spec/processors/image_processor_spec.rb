@@ -3,7 +3,6 @@
 require 'spec_helper'
 require 'processors/image_processor'
 require 'app_logger'
-require 'pry'
 
 RSpec.describe FileProcessor::ImageProcessor do
   let(:file_path) { 'dummy.png' }

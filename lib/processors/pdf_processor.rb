@@ -5,9 +5,11 @@ require_relative 'base_processor'
 module FileProcessor
   # Processor for PDF files
   class PdfProcessor < BaseProcessor
+    IMAGE_FORMAT = 'png'
+
     def extract_preview
       image = MiniMagick::Image.open(@file)
-      image.format('png')
+      image.format(IMAGE_FORMAT)
       image.resize(PREVIEW_RESOLUTION)
       image
     end
