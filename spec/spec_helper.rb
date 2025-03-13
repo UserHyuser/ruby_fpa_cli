@@ -18,6 +18,7 @@
 
 require 'factory_bot'
 require 'faker'
+require_relative '../config/initializers/i18n'
 
 RSpec.configure do |config|
   config.include FactoryBot::Syntax::Methods

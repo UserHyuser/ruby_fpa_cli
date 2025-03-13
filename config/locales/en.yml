@@ -1,0 +1,23 @@
+en:
+  cli:
+    usage: "Usage: file_processor -f FILE [options]"
+    options:
+      file: "Input file to process"
+      command: "Command to execute: preview, text, or all"
+      help: "Prints this help"
+    errors:
+      file_required: "Input file is required"
+      file_not_found: "File not found: %{file}"
+      invalid_command: "Invalid command: %{command}"
+      general_error: "CLI error: %{message}"
+  file_processor:
+    errors:
+      preview_not_supported: "Preview not supported for file type"
+      text_extraction_not_supported: "Text extraction not supported for file type"
+    operations:
+      preview:
+        success: "Preview extracted successfully"
+        error: "Preview extraction failed"
+      text:
+        success: "Text extracted successfully"
+        error: "Text extraction failed"
